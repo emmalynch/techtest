@@ -3,9 +3,9 @@
 
 # About this program
 
-A simple program to process a file containing customer's locations and write a file of customers within 100KM of a given location.
+A simple program to process a file containing customer's locations and write a file of customers within 100KM of a given location. 
 
-File paths and office locations are configured in `config/default.json`.
+File paths and office locations are configured in `config/default.json`. By default, results are written to `<PROJECT_ROOT>/resources/output.txt`.
 
 Tested with: 
  - Node - `v15.9.0`
@@ -18,6 +18,28 @@ Tested with:
 - Install project: `yarn install`
 - Build: `yarn build`
 - Run: `yarn start`
+
+# Tests
+
+Tests are written in jest, and coverage is calculated with coveralls.
+
+Tests can be executed by running: `yarn test`.
+The following coverage report will accompany the test results.
+
+File                    |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+------------------------|----------|----------|----------|----------|-------------------|
+All files               |      100 |      100 |      100 |      100 |                   |
+ src                    |      100 |      100 |      100 |      100 |                   |
+  consts.ts             |      100 |      100 |      100 |      100 |                   |
+ src/models             |      100 |      100 |      100 |      100 |                   |
+  customer.ts           |      100 |      100 |      100 |      100 |                   |
+  index.ts              |      100 |      100 |      100 |      100 |                   |
+  location.ts           |      100 |      100 |      100 |      100 |                   |
+ src/services           |      100 |      100 |      100 |      100 |                   |
+  customers.ts          |      100 |      100 |      100 |      100 |                   |
+  file.ts               |      100 |      100 |      100 |      100 |                   |
+ src/utils              |      100 |      100 |      100 |      100 |                   |
+  distanceCalculator.ts |      100 |      100 |      100 |      100 |                   |
 
 # Output
 
