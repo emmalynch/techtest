@@ -23,10 +23,14 @@
     "test": "jest",
     "coverage": "jest --coverage",
     "watch": "npm run build -- --watch",
-    "watch:test": "jest --watch"
+    "watch:test": "jest --watch",
+    "start": "node lib/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "config": "^3.3.4"  
+  },
   "devDependencies": {
+    "@types/config": "^0.0.38",
     "@types/jest": "^23.3.3",
     "@types/node": "^10.11.4",
     "coveralls": "^3.0.2",

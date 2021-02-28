@@ -1,0 +1,14 @@
+{
+    "config": {
+        "input": {
+            "filePath": "./resources/customers.txt",
+            "location": {
+                "longitude": -6.257664,
+                "latitude": 53.339428
+            }
+        },
+        "output": {
+            "filePath": "./resources/output.txt"
+        }
+    }
+}
