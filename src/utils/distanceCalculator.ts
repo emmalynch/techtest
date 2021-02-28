@@ -16,6 +16,9 @@ import { Location } from '../models';
  *
  */
 export function getGreatCircleDistance(a: Location, b: Location): number {
+  if(a.latitude === b.latitude && a.longitude === b.longitude) {
+    return 0;
+  }
   const aInRadians = a.toRadians();
   const bInRadians = b.toRadians();
 

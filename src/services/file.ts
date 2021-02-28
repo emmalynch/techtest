@@ -1,5 +1,8 @@
 import fs from 'fs';
+import createLogger from "logging";
 import { Customer, ICustomer } from '../models';
+
+const logger = createLogger('file.ts');
 
 /**
  * @func readCustomersFromFile
@@ -10,17 +13,22 @@ import { Customer, ICustomer } from '../models';
  * @return {ICustomer[]} an unsorted array of customers
  */
 export function readCustomersFromFile(filePath: string): ICustomer[] {
-  const file = fs.readFileSync(filePath, 'utf-8');
-  const customerData: ICustomer[] = [];
+  try {
+    const file = fs.readFileSync(filePath, 'utf-8');
+    const customerData: ICustomer[] = [];
 
-  file.split('\n').map(line => {
-    const data = JSON.parse(line);
-    customerData.push(
-      new Customer(data.user_id, data.name, data.latitude, data.longitude)
-    );
-  });
+    file.split('\n').map(line => {
+      const data = JSON.parse(line);
+      customerData.push(
+        new Customer(data.user_id, data.name, data.latitude, data.longitude)
+      );
+    });
 
-  return customerData;
+    return customerData;
+  } catch (error) {
+    logger.error(`Could not process file at location: ${filePath}`);
+    throw error;
+  }
 }
 
 /**

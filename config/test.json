@@ -1,0 +1,14 @@
+{
+    "config": {
+        "input": {
+            "filePath": "./__tests__/resources/input.txt",
+            "location": {
+                "longitude": -6.257664,
+                "latitude": 53.339428
+            }
+        },
+        "output": {
+            "filePath": "./__tests__/resources/output.txt"
+        }
+    }
+}

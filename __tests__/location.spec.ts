@@ -1,4 +1,4 @@
-import { Location } from "../src/models"
+import { Location } from '../src/models';
 
 test('Locations can be converted to radians', () => {
     const location = new Location(53.3437967,-6.2567603);
